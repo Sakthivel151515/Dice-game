@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn3d.iconscout.com/3d/premium/thumb/red-rolling-dice-3d-icon-png-download-5726202.png?f=webp"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dice Game</title>
+  </head>
+  <body onload="handlegamestart()">
+    <div class="main">
+      <!-- Header -->
+      <div class="header">
+        <b>Let's Play Dice</b>
+        <h1 id="player-move">Player - 1 to Play</h1>
+      </div>
+      <!-- Game -->
+      <div class="game">
+        <div class="player">
+          <h2>player1</h2>
+          <h2 id="player1-score">0</h2>
+          <button type="button" 
+          id="player1-button"
+          onclick="handleDiceRoll('player-1')"
+          >Roll Now</button>
+        </div>
+        <div class="image">
+          <img src="assets/1.png" alt="dice" id="dice" />
+        </div>
+        <div class="player">
+          <h2>player2</h2>
+          <h2 id="player2-score">0</h2>
+          <button type="button" 
+          id="player2-button"
+          onclick="handleDiceRoll('player-2')"
+          >Roll Now</button>
+        </div>
+      </div>
+      <!-- Reset -->
+      <div class="reset">
+        <button type="button" class="reset-button" onclick="handlereset()">Reset</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
